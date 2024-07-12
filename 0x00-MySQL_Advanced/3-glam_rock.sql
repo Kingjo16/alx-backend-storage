@@ -1,6 +1,11 @@
 -- List Glam rock with thir main style
--- SELECT band_name
-SELECT band_name, (IFNULL(split, '2020') - formed) AS lifespan
-    FROM metal_bands
-    WHERE FIND_IN_SET('Glam rock', IFNULL(style, "")) > 0
-    ORDER BY lifespan DESC;
+-- 3-glam_rock.sql
+SELECT
+    band_name,
+    IFNULL(2022 - formed, 0) - IFNULL(2022 - split, 0) AS lifespan
+FROM
+    metal_bands
+WHERE
+    main_style = 'Glam rock'
+ORDER BY
+    lifespan DESC;
