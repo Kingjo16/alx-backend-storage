@@ -1,1 +1,2 @@
+// Add a Print Json for each
 db.school.find().forEach(printjson);

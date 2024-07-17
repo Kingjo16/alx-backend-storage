@@ -1,0 +1,2 @@
+// Find and list doc with the name holberton.
+db.school.find({name: /Holberton.*/}).forEach(printjson);

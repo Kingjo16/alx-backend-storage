@@ -1,1 +1,3 @@
+// Insert a Holverton sc
 db.school.insert({name: "Holberton school"});
+
